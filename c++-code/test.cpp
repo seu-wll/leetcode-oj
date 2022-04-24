@@ -1,24 +1,18 @@
-#include <iostream>
-#include <vector>
+#include<iostream>
+#include<vector>
 using namespace std;
-
-class Solution {
-public:
-    int minCostClimbingStairs(vector<int>& cost) {
-        vector<int> dp(cost.size());
-        dp[0] = cost[0];
-        dp[1] = cost[1];
-        for (int i = 2; i < cost.size(); i++) {
-            dp[i] = min(dp[i - 1], dp[i - 2]) + cost[i];
-        }
-        return min(dp[cost.size() - 1], dp[cost.size() - 2]);
-    }
-};
-
 int main() {
-    int a[] = {1, 100, 1, 1, 1, 100, 1, 1, 100, 1};
-    vector<int> cost(a, a + sizeof(a) / sizeof(int));
-    Solution solution;
-    cout << solution.minCostClimbingStairs(cost) << endl;
-    
+    int n;
+    while (cin >> n) {
+        vector<int> gym(n);
+        vector<int> work(n);
+        for (int i = 0; i < n; i++) cin >> work[i];
+        for (int i = 0; i < n; i++) cin >> gym[i];
+        int result = 0;
+
+        // 处理逻辑
+
+        cout << result << endl;
+    }
+    return 0;
 }
